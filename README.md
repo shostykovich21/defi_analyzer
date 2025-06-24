@@ -90,16 +90,24 @@ python main_fast.py --stage gnn
 
 ```
 defi-wallet-analyzer/
-  src/
-    data/        # fetch on-chain data
-    analysis/    # features + clustering
-    models/      # GNN code
-    utils/       # config helper
-  results/       # CSVs, models, metadata
-  1_fetch_sample_data.py
-  main_fast.py
-  config.yaml
-  requirements.txt
+├── src/
+│   ├── data/          # Connects to the blockchain and fetches transaction data.
+│   ├── analysis/      # Processes that data to build wallet profiles and group similar ones.
+│   ├── models/        # Learns wallet behavior using a graph neural network.
+│   └── utils/         # Small helpers like reading the config file.
+│
+├── results/           # Stores everything the program generates:
+│   │                  # - sample_transactions.csv: raw Ethereum transactions
+│   │                  # - fast_wallet_clusters.csv: features and cluster labels for wallets
+│   │                  # - wallet_embeddings_gnn_fast.csv: vector representations of wallets
+│   │                  # - scaler.joblib / pca.joblib: saved tools to keep results consistent
+│   │                  # - clustering_metadata.json: summary of how wallets were grouped
+│
+├── 1_fetch_sample_data.py   # Use this once to download sample data from Ethereum.
+├── main_fast.py             # Runs the full analysis pipeline quickly using the saved data.
+│
+├── config.yaml              # Your API key and all settings go here. No need to touch the code.
+└── requirements.txt         # List of packages to install before running the project.
 ```
 
 ---
