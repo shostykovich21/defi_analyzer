@@ -8,10 +8,6 @@ venv/
 # Config files
 config.yaml
 
-# Results & Preprocessors
-results/
-*.joblib
-*.json
 
 # IDE
 .vscode/

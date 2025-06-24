@@ -1,0 +1,7 @@
+{
+    "dbscan_eps": 0.2895266033015511,
+    "dbscan_min_samples": 5,
+    "silhouette_score": 0.6876321117995414,
+    "num_clusters_found": 2,
+    "num_noise_points": 7
+}
