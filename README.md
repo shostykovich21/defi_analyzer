@@ -4,8 +4,8 @@
 ![MIT License](https://img.shields.io/badge/License-MIT-yellow.svg)
 ![PyTorch](https://img.shields.io/badge/Built%20with-PyTorch-FF69B4.svg)
 
-A fast tool that profiles Ethereum wallets.  
-It grabs on-chain transactions, clusters similar addresses, and learns dense GNN embeddings.  
+A lightning fast tool that profiles Ethereum wallets.  
+It grabs on-chain transactions, clusters similar addresses, and learns dense graph neural network embeddings.  
 Runs end-to-end in seconds on a laptop.
 
 ---
@@ -34,7 +34,7 @@ Runs end-to-end in seconds on a laptop.
 1. **`1_fetch_sample_data.py`** – one-time, online.  
    Downloads transactions via Etherscan and stores them in `results/`.  
 2. **`main_fast.py`** – offline, repeatable.  
-   Does feature engineering → clustering → GNN in one go.
+   Does feature engineering, clustering, GNN in one go.
 
 ---
 # How to run the project:
@@ -72,14 +72,14 @@ gnn:
 ## Run
 
 ```bash
-# 1 · Download data (once)
+# Download data (once)
 python 1_fetch_sample_data.py                          
 python 1_fetch_sample_data.py --address 0x... --limit 500
 
-# 2 · Full pipeline (any time)
+# Full pipeline (any time)
 python main_fast.py                                    
 
-# Optional slices
+# To see the slices
 python main_fast.py --stage cluster
 python main_fast.py --stage gnn
 ```
