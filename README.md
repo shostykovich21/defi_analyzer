@@ -126,5 +126,3 @@ defi-wallet-analyzer/
 
 MIT
 
-```
-```
