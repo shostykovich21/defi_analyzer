@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.env
+
+# Config files
+config.yaml
+
+# Results & Preprocessors
+results/
+*.joblib
+*.json
+
+# IDE
+.vscode/
+.idea/
